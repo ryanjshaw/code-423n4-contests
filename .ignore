@@ -1,0 +1,2 @@
+# Revert the .gitignore rule so that VSCode CTRL+P search works
+!/*/
