@@ -6,7 +6,7 @@ jq -r '.name' repos.json | while read -r repo_name; do
     # Check if the directory with the repo name exists
     if [[ ! -d "$repo_name" ]]; then
         # Clone the repo if it doesn't exist
-        gh repo clone "code-423n4/$repo_name"
+        gh repo clone "code-423n4/$repo_name" -- --recurse 
     else
         echo "Repo $repo_name already exists in the current folder."
     fi
